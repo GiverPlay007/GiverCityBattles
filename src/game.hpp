@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_HPP
+#define GAME_HPP
 
 #include <iostream>
 #include "SDL.h"
@@ -28,3 +29,5 @@ private:
 	SDL_Window* window;
 	SDL_Renderer* renderer;
 };
+
+#endif
