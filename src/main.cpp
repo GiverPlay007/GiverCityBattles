@@ -1,12 +1,11 @@
 #include "game.hpp"
 
+#define FRAME_DELAY 1000 / 60
+
 Game *game = nullptr;
 
 int main(int args, char *argv[])
 {
-	const int FPS = 60;
-	const int frameDelay = 1000 / 60;
-
 	Uint32 frameStart;
 	int frameTime;
 
@@ -22,8 +21,8 @@ int main(int args, char *argv[])
 
 		frameTime = SDL_GetTicks() - frameStart;
 
-		if (frameDelay > frameTime) {
-			SDL_Delay(frameDelay - frameTime);
+		if (FRAME_DELAY > frameTime) {
+			SDL_Delay(FRAME_DELAY - frameTime);
 		}
 	}
 
